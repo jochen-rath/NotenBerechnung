@@ -1,23 +1,23 @@
 # NotenBerechnung
 Diese Datei berechnet die Noten, die mit der App SitzplanNoteneingabe gesetzt werden.
 
-##Beschreibung
+## Beschreibung
 Diese App berechnet die durschnittswerte der mündlichen Noten, die mit der App SitzplanNoteneingabe erzeugt werden. Dadurch kann man Schülern einen Zwischenstand der aktuellen mündlichen Noten geben.
 
 
-##Voraussetzungen
+## Voraussetzungen
 Die App ist in Python geschrieben und benötigt Kivy. Installiere es mit
 ```
 pip3 install kivy
 ```
 
-##Android App erstellen
+## Android App erstellen
 In der Datei buildozer.spec sind die Voraussetzungen zur Erzeugung der Android App gegeben. Erzeuge die App mit dem Befehl
 ```
 buildozer android debug
 ```
 
-##Nutzung
+## Nutzung
 Auf einem Linux/Windows Computer kann die App direkt genutzt werden:
 ```
 python main.py
