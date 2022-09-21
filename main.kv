@@ -1,0 +1,42 @@
+<MultiButton@Button>:
+    text: 'Multi'
+    size_hint:None,None
+    background_color: 0, 1, 1, 1
+    font_size: app.schriftgroesse
+    size: 5*self.font_size, 4*self.font_size
+
+<MenuButton@MultiButton>:
+    on_release: app.entferneMenuLadeNotenliste(self.text)
+
+<MenuZeile@FloatLayout>:
+    MultiButton:
+        text:'Beenden'
+        pos_hint:{"left":0,"y":0}
+        on_press: app.entferneNotenlisteLadeMenu()
+        size: 5*self.font_size, 2*self.font_size
+
+<Namenslabel@Label>:
+    text: "Vorname"
+    halign: "left"
+    size_hint:None,None
+    font_size: app.schriftgroesse
+    size: 5*app.schriftgroesse, 2*app.schriftgroesse
+
+<Notenlabel@Label>:
+    text: "0"
+    size_hint:None,None
+    font_size: app.schriftgroesse
+    size: 2*app.schriftgroesse, 2*app.schriftgroesse
+
+
+<Zeile@BoxLayout>:
+    id:zeile
+    orientation: 'horizontal'
+    Namenslabel:
+        id: name
+        vorname: 'Vorname'
+        nachname: 'Nachname'
+        text: self.vorname+', '+self.nachname
+        size: 15*app.schriftgroesse, 2*app.schriftgroesse
+    Notenlabel:
+        id:note
